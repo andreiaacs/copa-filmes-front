@@ -1,0 +1,29 @@
+<ng-container *ngIf="!loading; else loader">
+    <div class="row classificacao">
+        <div class="col">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">1º</span>
+                </div>
+                <div class="form-control" *ngIf="champions.first.titulo">{{ champions.first.titulo }}</div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row classificacao">
+        <div class="col">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">2º</span>
+                </div>
+                <div class="form-control" *ngIf="champions.second.titulo">{{ champions.second.titulo }}</div>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+<ng-template #loader>
+    <div class="container d-flex justify-content-center mt-4">
+        <h1 class="fa-blink">Loading...</h1>
+    </div>
+</ng-template>

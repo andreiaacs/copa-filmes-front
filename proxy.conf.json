@@ -1,0 +1,9 @@
+{
+    "/rest": {
+        "target": "https://localhost:5001/api/Movies/",
+        "pathRewrite": {
+            "^/rest": ""
+        },
+        "secure": false
+    }
+}

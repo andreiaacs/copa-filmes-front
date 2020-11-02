@@ -1,0 +1,36 @@
+<ng-container *ngIf="!loading; else loader">
+    <div>
+        <h5>
+            <b class="font-white">Selecionados <br> {{ selected }} de {{ total }} filmes</b>
+        </h5>
+    </div>
+    <br>
+    <div class="card-columns">
+        <div class="filmes" *ngFor="let movie of movies; let i= index">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="defaultUnchecked{{i}}" (change)="changed($event, movie)" [disabled]="disable">
+                        <label class="custom-control-label" for="defaultUnchecked{{i}}"><h5 class="card-title">{{ movie.titulo }}</h5></label>
+                    </div>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ movie.ano }}</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="d-flex flex-row-reverse bd-highlight">
+        <button type="button" (click)="generateChampionship()" class="btn btn-dark">
+            <h5>
+                GERAR MEU CAMPEONATO
+            </h5>
+        </button>
+    </div>
+
+</ng-container>
+
+<ng-template #loader>
+    <div class="container d-flex justify-content-center mt-4">
+        <h1 class="fa-blink">Loading...</h1>
+    </div>
+</ng-template>

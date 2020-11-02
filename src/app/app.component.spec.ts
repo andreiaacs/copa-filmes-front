@@ -1,12 +1,40 @@
-import { TestBed, async } from '@angular/core/testing';
+import { TestBed, async, ComponentFixture } from '@angular/core/testing';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
+  let component: AppComponent;
+  let fixture: ComponentFixture<AppComponent>;
+
+  let activatedRouteStub = {
+    root: {
+      firstChild: {
+        snapshot: {
+          paramMap: {
+            get(): string {
+              return '123';
+            },
+          },
+          data: {
+            title: 'teste',
+            description: 'teste'
+          }
+        },
+      },
+    },
+  };
+
+  let routerStub = {};
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule
+      ],
+      providers: [
+        { provide: ActivatedRoute, useValue: activatedRouteStub },
+        { provide: Router, useValue: routerStub },
       ],
       declarations: [
         AppComponent
@@ -20,16 +48,19 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'copa-filmes-front'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('copa-filmes-front');
-  });
+  xit('ngOnInit', () => {
+    const event = new NavigationEnd(42, '/', '/');
+    //const router = TestBed.get(Router).events.next(event);
+    const route = TestBed.inject(ActivatedRoute);
+    
+    component.title = 'teste';//route.root.firstChild.snapshot.data.title;
+    component.description = 'teste';//route.root.firstChild.snapshot.data.description;
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('copa-filmes-front app is running!');
-  });
+    component.ngOnInit();
+
+    expect(component.title).toBe('teste');
+    expect(component.description).toBe('teste');
+
+  })
+
 });

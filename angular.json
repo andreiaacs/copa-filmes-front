@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "copa-filmes-front"
+    }
+  },
+  "defaultProject": "copa-filmes-front",
+  "cli": {
+    "analytics": "e26d0d62-cd69-46fe-a3d0-08efc7efc3eb"
+  }
 }
