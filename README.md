@@ -27,8 +27,8 @@ Para executar os testes unitários basta rodar o comando: npm test dentro da pas
 
 ## 📦 Desenvolvimento
 
-A API utilizada para buscar os dados deste projeto encontra-se deployada no azure (https://copafilmesapi.azurewebsites.net/api/Movies).
-E seu código fonte em (https://github.com/andreiaacs/CopaFilmesWebApi).
+A API utilizada para buscar os dados deste projeto encontra-se deployada no azure (https://copafilmesapi.azurewebsites.net/api/Movies),
+e seu código fonte em (https://github.com/andreiaacs/CopaFilmesWebApi).
 
 ## 🛠️ Construído com
 
