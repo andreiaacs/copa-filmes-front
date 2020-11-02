@@ -50,7 +50,39 @@ describe('FinalResultComponent', () => {
     fixture.detectChanges();
   });
 
-  xit('should create', () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  describe('ngOnInit', () => {
+
+    it('loading is true', () => {
+      const localStorage = TestBed.inject(LocalStorage);
+      const localStorageSpy = spyOn(localStorage, 'getItem').and.callThrough();
+
+      component.loading = true;
+
+      component.ngOnInit();
+
+      expect(localStorageSpy).toHaveBeenCalled();
+      expect(component.loading).toBe(false);
+    });
+
+    it('loading is false', () => {
+      const localStorage = TestBed.inject(LocalStorage);
+      const localStorageSpy = spyOn(localStorage, 'getItem').and.callThrough();
+
+      component.loading = false;
+
+      component.ngOnInit();
+
+      expect(localStorageSpy).toHaveBeenCalled();
+      expect(component.loading).toBe(false);
+    });
+
+    
+  });
+
+
+
 });

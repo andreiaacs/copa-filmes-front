@@ -52,7 +52,6 @@ export class MoviesListComponent implements OnInit {
   }
 
   generateChampionship(): void {
-    console.log('s: ', this.selectedMovies);
     this.copaFilmesService
       .postSelectedMovies(this.selectedMovies)
       .pipe()
