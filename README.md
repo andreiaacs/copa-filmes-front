@@ -1,27 +1,47 @@
-# CopaFilmesFront
+# Copa Filmes
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.6.
+Projeto para campeonato de filmes
 
-## Development server
+## 🚀 Começando
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
 
-## Code scaffolding
+Consulte **Implantação** para saber como implantar o projeto.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### 📋 Pré-requisitos
 
-## Build
+Node 12.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### 🔧 Instalação
 
-## Running unit tests
+Após clonar o projeto, entrar na pasta do mesmo pelo CMD e executar os seguintes comandos:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. npm install
+2. npm start
 
-## Running end-to-end tests
+E abrir o navegador no caminho: http://localhost:4200 para navegar na aplicação.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## ⚙️ Executando os testes
 
-## Further help
+Para executar os testes unitários basta rodar o comando: npm test dentro da pasta raiz do projeto no CMD.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## 📦 Desenvolvimento
+
+A API utilizada para buscar os dados deste projeto encontra-se deployada no azure (https://copafilmesapi.azurewebsites.net/api/Movies).
+E seu código fonte em (https://github.com/andreiaacs/CopaFilmesWebApi).
+
+## 🛠️ Construído com
+
+* [Angular CLI](https://github.com/angular/angular-cli) versão 10.0.6.
+
+## ✒️ Autores
+
+Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início
+
+* **Andréia Alencar** - *Trabalho Inicial* - [andreiaacs](https://github.com/andreiaacs)
+
+
+
+
+
+
