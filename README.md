@@ -1,6 +1,7 @@
 # Copa Filmes
 
-Projeto para campeonato de filmes
+Projeto para campeonato de filmes.
+Encontra-se deployado neste link: https://red-desert-0252dc310.azurestaticapps.net/
 
 ## 🚀 Começando
 
