@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 import { LocalStorage } from '@ngx-pwa/local-storage';
+import { first } from 'rxjs/operators';
 import { Champions } from 'src/app/models/champions';
 import { Movie } from 'src/app/models/movie';
 import { CopaFilmesService } from '../../services/copa-filmes.service';
@@ -54,7 +55,7 @@ export class MoviesListComponent implements OnInit {
   generateChampionship(): void {
     this.copaFilmesService
       .postSelectedMovies(this.selectedMovies)
-      .pipe()
+      .pipe(first())
       .subscribe(
         (res) => {
           console.log('res: ', res);
